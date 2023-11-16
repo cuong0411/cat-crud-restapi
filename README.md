@@ -63,13 +63,24 @@ public class Cat {
 
 ## Endpoints
 
-| Method | Endpoint |
-| --- | --- |
-| GET | /api/cats |
-| GET | /api/cats/{id} |
-| POST | /api/cats |
-| PUT | /api/cats/{id} |
-| DELETE | /api/cats/{id} |
+| Method | Endpoint | role |
+| --- | --- | --- |
+| GET | /api/cats | ROLE_EMPLOYEE |
+| GET | /api/cats/{id} | ROLE_EMPLOYEE |
+| POST | /api/cats | ROLE_MANAGER |
+| PUT | /api/cats/{id} | ROLE_MANAGER |
+| DELETE | /api/cats/{id} | ROLE_ADMIN |
+
+## Users
+
+## Endpoints
+
+| username | password | role |
+| --- | --- | --- |
+| ana | test123 | ROLE_EMPLOYEE |
+| topson | test123 | ROLE_EMPLOYEE, ROLE_MANAGER |
+| notail | test123 | ROLE_EMPLOYEE, ROLE_MANAGER, ROLE_ADMIN |
+
 
 ## Run
 
