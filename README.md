@@ -43,6 +43,7 @@
 ## Connection
 
 Database: demo
+
 Tables: cats, members and roles
 
 ```
@@ -81,6 +82,28 @@ public class Cat {
 | topson | test123 | ROLE_EMPLOYEE, ROLE_MANAGER |
 | notail | test123 | ROLE_EMPLOYEE, ROLE_MANAGER, ROLE_ADMIN |
 
+## repositories folder
+
+There are two files:
+
+- CatDao.java (using EntityManager)
+- CatRepository (using JpaRepository)
+
+Inject the one you want into CatServiceImpl.java
+
+```java
+@Service
+public class CatServiceImpl implements CatService{
+    
+    private final CatRepository catRepository; // replace with CatDao if you want
+
+    public CatServiceImpl(CatRepository catRepository) {
+        this.catRepository = catRepository;
+    }
+
+    // some other methods
+}
+```
 
 ## Run
 
