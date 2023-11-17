@@ -28,7 +28,7 @@ public class CatServiceImpl implements CatService{
         if (!cat.isPresent()) {
             throw new CatNotFoundException("Cat with id " + id + " not found.");
         }
-        return catRepository.findById(id);
+        return cat;
     }
 
     @Override
